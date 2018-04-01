@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update -y && \
 apt install -y \
 kali-linux-top10 \
+kali-linux-web \
 x11vnc \
 xvfb \
 xfce4
