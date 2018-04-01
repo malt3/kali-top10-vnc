@@ -6,9 +6,14 @@ RUN apt update -y && \
 apt install -y \
 kali-linux-top10 \
 x11vnc \
-xfce4
+xvfb \
+openbox
 
-RUN sudo x11vnc -storepasswd CHANGEME /etc/x11vnc.pass
+ADD startup.sh /startup.sh
+RUN chmod 0755 /startup.sh
+
+# RUN x11vnc -storepasswd CHANGEME /etc/x11vnc.pas
+ENV VNC_PASSWD CHANGEME
 
 RUN apt update -y && apt dist-upgrade -y
 
@@ -18,3 +23,5 @@ rm -rf /var/lib/apt/lists/*
 EXPOSE 5900
 
 WORKDIR /root/
+
+CMD /startup.sh
