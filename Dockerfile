@@ -6,7 +6,7 @@ RUN apt update -y && \
 apt install -y \
 kali-linux-top10 \
 x11vnc \
-xfce
+xfce4
 
 RUN sudo x11vnc -storepasswd CHANGEME /etc/x11vnc.pass
 
