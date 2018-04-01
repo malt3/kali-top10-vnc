@@ -17,4 +17,4 @@ rm -rf /var/lib/apt/lists/*
 
 EXPOSE 5900
 
-PWD /root/
+WORKDIR /root/
