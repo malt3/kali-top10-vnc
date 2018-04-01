@@ -7,7 +7,7 @@ apt install -y \
 kali-linux-top10 \
 x11vnc \
 xvfb \
-openbox
+xfce4
 
 ADD startup.sh /startup.sh
 RUN chmod 0755 /startup.sh
